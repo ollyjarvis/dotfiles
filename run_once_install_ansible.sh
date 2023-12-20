@@ -19,7 +19,6 @@ if ! command -v paru &> /dev/null; then
   sudo pacman -S --needed git base-devel
   git clone https://aur.archlinux.org/paru.git
   cd paru
-  su olly
   makepkg -si
 
   cd ~/ 
