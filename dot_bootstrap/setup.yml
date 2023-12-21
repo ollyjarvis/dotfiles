@@ -69,6 +69,7 @@
           - reflector
           - ripgrep
           - strawberry
+          - timeshift
           - ttf-google-fonts-git
           - ttf-jetbrains-mono-nerd
           - wine-staging
