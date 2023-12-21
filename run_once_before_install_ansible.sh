@@ -19,7 +19,7 @@ if ! command -v paru &> /dev/null; then
   sudo pacman -S --needed git base-devel
   git clone https://aur.archlinux.org/paru.git
   cd paru
-  makepkg -si
+  makepkg -sic --noconfirm
 
   cd ~/ 
   rm -rf ~/paru/
@@ -32,7 +32,7 @@ if ! command -v ansible-playbook &> /dev/null; then
   echo "->->->->->->->->->->->> Installing Ansible <<-<-<-<-<-<-<-<-<-<-<-"
   echo ""
 
-  paru -S ansible
+  paru -S ansible --noconfirm
   ansible-galaxy collection install kewlfft.aur
 fi
 
@@ -55,4 +55,6 @@ if ! command -v hyprctl &> /dev/null; then
   
   cd ~/ 
   rm -rf ~/Arch-Hyprland/
-fi
+fi 
+
+paru -c
