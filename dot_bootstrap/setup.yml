@@ -51,13 +51,13 @@
           - qt5ct
           - reflector
           - ripgrep
+          - starship
           - strawberry
           - ttf-google-fonts-git
           - ttf-jetbrains-mono-nerd
           - wine-staging
           - winetricks
           - zip
-
         state: present
 
     - name: Install Flatpak packages
