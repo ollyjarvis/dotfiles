@@ -57,7 +57,7 @@
           - wine-staging
           - winetricks
           - zip
-          - zoxide
+
         state: present
 
     - name: Install Flatpak packages
