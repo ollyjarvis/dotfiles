@@ -28,7 +28,6 @@
         use: paru
         name:
           - ark
-          - bat
           - btop
           - chezmoi
           - code
@@ -70,9 +69,9 @@
           - reflector
           - ripgrep
           - strawberry
-          - starship
+          - ttf-google-fonts-git
           - ttf-jetbrains-mono-nerd
-          - wine
+          - wine-staging
           - winetricks
           - zip
           - zoxide
