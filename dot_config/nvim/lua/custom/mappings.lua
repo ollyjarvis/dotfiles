@@ -7,4 +7,14 @@ M.n = {
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up"},
   }
 
+M.crates = {
+  n = {
+    ["<leader>rcu"] = {
+      function()
+        require("crates").upgrade_all_crates()
+      end,
+      "upgrade all crates",
+  },
+}
+
 return M

@@ -79,6 +79,11 @@ local plugins = {
       },
     },
     opts = {
+      function()
+        local M = require "plugins.configs.cmp",
+        table.insert(M.sources, { name = "crates"})
+        return M
+      end,
       sources = {
         { name = "nvim_lsp", group_index = 2 },
         { name = "copilot",  group_index = 2 },
@@ -109,6 +114,15 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
+  },
+  {
+    "saecki/crates.nvim",
+    ft = { "rust", "toml" },
+    config = function()
+      local crates = require("crates")
+      crates.setup(opts)
+      crates.show()
+    end,
   }
 }
 
