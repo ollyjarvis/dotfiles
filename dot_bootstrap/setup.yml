@@ -71,7 +71,7 @@
           - strawberry
           - ttf-google-fonts-git
           - ttf-jetbrains-mono-nerd
-          - wine-staging
+          - wine
           - winetricks
           - zip
           - zoxide
