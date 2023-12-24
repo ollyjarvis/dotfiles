@@ -67,6 +67,8 @@
           - qt5ct
           - reflector
           - ripgrep
+          - rsync
+          - screen
           - strawberry
           - timeshift
           - ttf-google-fonts-git
