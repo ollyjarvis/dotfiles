@@ -76,6 +76,7 @@
           - winetricks
           - zip
           - zoxide
+          - zsh-fast-syntax-highlighting
         state: present
       become: yes
       become_user: aur_builder
