@@ -42,8 +42,6 @@
           - git
           - gnome
           - jdk19-graalvm-bin
-          - jellyfin-server
-          - jellyfin-web
           - jupyterlab
           - kdenlive
           - kpat
@@ -69,8 +67,8 @@
           - ripgrep
           - rsync
           - screen
+          - snapper
           - strawberry
-          - timeshift
           - ttf-google-fonts-git
           - ttf-jetbrains-mono-nerd
           - wine-staging
