@@ -14,6 +14,7 @@ M.crates = {
         require("crates").upgrade_all_crates()
       end,
       "upgrade all crates",
+    },
   },
 }
 

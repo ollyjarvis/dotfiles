@@ -1,3 +1,5 @@
+export EDITOR="nvim"
+
 alias vi="nvim"
 alias neofetch="fastfetch"
 alias upgrade="paru -Syu && flatpak upgrade && paru -c && flatpak uninstall --unused"
@@ -5,3 +7,4 @@ alias yay="paru"
 alias ls="exa"
 alias cat="bat"
 alias bash="chsh -s /usr/bin/bash && /usr/bin/bash"
+alias cm="chezmoi"

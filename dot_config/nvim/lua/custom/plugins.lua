@@ -53,6 +53,7 @@ local plugins = {
         "codelldb",
         "rust-analyzer",
         "pyright",
+        "lua-language-server",
       },
     },
   },
@@ -80,7 +81,7 @@ local plugins = {
     },
     opts = {
       function()
-        local M = require "plugins.configs.cmp",
+        local M = require "plugins.configs.cmp"
         table.insert(M.sources, { name = "crates"})
         return M
       end,
@@ -106,7 +107,7 @@ local plugins = {
     ft = "rust",
     dependencies = "neovim/nvim-lspconfig",
     opts = function()
-      return require "custom.configs.rust-tools"
+      return require "custom.configs.rusttools"
     end,
     config = function(_, opts)
       require("rust-tools").setup(opts)
@@ -120,10 +121,10 @@ local plugins = {
     ft = { "rust", "toml" },
     config = function()
       local crates = require("crates")
-      crates.setup(opts)
+      crates.setup(crates)
       crates.show()
     end,
-  }
+  },
 }
 
 return plugins
