@@ -58,3 +58,5 @@ if ! command -v hyprctl &> /dev/null; then
 fi 
 
 paru -c
+
+echo "->->->->->->->->->->->> Setup configs in ~/.firefox_config/ <<-<-<-<-<-<-<-<-<-<-<-"
