@@ -40,3 +40,4 @@ compinit
 eval "$(starship init zsh)"
 
 pokemon-colorscripts --no-title -r
+source /usr/share/nvm/init-nvm.sh

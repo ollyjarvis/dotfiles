@@ -6,5 +6,6 @@ alias upgrade="paru -Syu && flatpak upgrade && paru -c && flatpak uninstall --un
 alias yay="paru"
 alias ls="exa"
 alias cat="bat"
+alias grep="rg"
 alias bash="chsh -s /usr/bin/bash && /usr/bin/bash"
 alias cm="chezmoi"
