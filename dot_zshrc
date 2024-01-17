@@ -1,16 +1,12 @@
 ZSH=~/.oh-my-zsh/
 
-# ZSH_THEME="robbyrussell"
-
 zstyle ':omz:update' mode disabled  # disable automatic updates
 
-# Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
 plugins=(
   git 
   sudo 
-  copyfile 
   zsh-autosuggestions
   z
 )
@@ -37,7 +33,9 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
-eval "$(starship init zsh)"
-
 pokemon-colorscripts --no-title -r
-source /usr/share/nvm/init-nvm.sh
+
+#Uncomment if you want to use nvm
+#source /usr/share/nvm/init-nvm.sh --no-use
+
+eval "$(starship init zsh)"
