@@ -7,6 +7,9 @@ symbol = " "
 [c]
 symbol = " "
 
+[cmd_duration]
+format = "[took](#cdd6f4) [${duration}](#f9e2af)"
+
 [conda]
 symbol = " "
 
@@ -15,6 +18,7 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+style = "#89b4fa"
 
 [docker_context]
 symbol = " "
@@ -30,6 +34,7 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+format = "[on](#cdd6f4) [${symbol}${branch}](#cba6f7)"
 
 [golang]
 symbol = " "
@@ -134,3 +139,9 @@ symbol = " "
 
 [scala]
 symbol = " "
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[->](#a6e3a1)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[->](#f38ba8)' # The 'failure_symbol' segment is being set to '➜' with the color 'bold red'
+
