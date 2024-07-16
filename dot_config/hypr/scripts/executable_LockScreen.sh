@@ -1,5 +1,7 @@
 #!/bin/bash
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 
-CONFIG="$HOME/.config/swaylock/config"
+# For Hyprlock
 
-sleep 0.5s; swaylock --config ${CONFIG} & disown
+pidof hyprlock || hyprlock -q 
+
