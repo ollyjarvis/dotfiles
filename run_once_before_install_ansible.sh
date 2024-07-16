@@ -59,4 +59,4 @@ fi
 
 paru -c
 
-echo "->->->->->->->->->->->> Setup configs in ~/.firefox_config/ <<-<-<-<-<-<-<-<-<-<-<-"
+sudo userdel -r aur_builder
