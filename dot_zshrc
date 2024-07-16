@@ -1,53 +1,40 @@
-export PATH=$PATH:/home/olly/.local/share/gem/ruby/3.0.0/bin
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-ZSH=~/.oh-my-zsh/
-
-zstyle ':omz:update' mode disabled  # disable automatic updates
-
-DISABLE_AUTO_TITLE="true"
-
-plugins=(
-  git 
-  sudo 
-  zsh-autosuggestions
-  z
-)
-
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir $ZSH_CACHE_DIR
+if [ ! -d "$ZINIT_HOME" ]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source "${ZINIT_HOME}/zinit.zsh"
 
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+pokemon-colorscripts --no-title -r
+eval "$(starship init zsh)"
+
+source ~/.aliases
+
+autoload -Uz compinit 
+
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+eval "$(zoxide init zsh)"
 
 setopt autocd extendedglob nomatch notify
 unsetopt beep
 bindkey -v
 
-zstyle :compinstall filename '~/.zshrc'
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
-autoload -Uz compinit
-compinit
-
-pokemon-colorscripts --no-title -r
-
-#Uncomment if you want to use nvm
-#source /usr/share/nvm/init-nvm.sh --no-use
-
-eval "$(starship init zsh)"
-
+export PATH=$PATH:/home/olly/.local/share/gem/ruby/3.0.0/bin
 export PATH="/home/olly/.go/bin:$PATH"
 
-source ~/.aliases
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+HISTDUP=erase
 
-# bun completions
-[ -s "/home/olly/.bun/_bun" ] && source "/home/olly/.bun/_bun"
+setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups hist_save_no_dups hist_ignore_dups hist_find_no_dups
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+zstyle ':completion:*' matcher-list 'm{a-z}={A-Za-z}'
