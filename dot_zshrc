@@ -1,3 +1,5 @@
+export PATH=$PATH:/home/olly/.local/share/gem/ruby/3.0.0/bin
+
 ZSH=~/.oh-my-zsh/
 
 zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -16,7 +18,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-source ~/.zsh_aliases
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
@@ -39,3 +40,14 @@ pokemon-colorscripts --no-title -r
 #source /usr/share/nvm/init-nvm.sh --no-use
 
 eval "$(starship init zsh)"
+
+export PATH="/home/olly/.go/bin:$PATH"
+
+source ~/.aliases
+
+# bun completions
+[ -s "/home/olly/.bun/_bun" ] && source "/home/olly/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

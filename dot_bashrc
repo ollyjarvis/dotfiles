@@ -2,8 +2,8 @@
 # ~/.bashrc
 #
 
-if [ -f ~/.bash_aliases ]; then
-. ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+. ~/.aliases
 fi
 
 function parse_git_branch(){
@@ -18,11 +18,9 @@ COLOR_GIT=$(tput setaf 3)
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
 # PS1='[\u@\h \W]\$ '
 # PS1='${COLOR_USR}\u ${COLOR_DIR}\w${COLOR_GIT}$(parse_git_branch) ${COLOR_DEF}$ '
 export PS1="\[\033[1;36m\]\u \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 bind 'set completion-ignore-case on'
+source /usr/share/nvm/init-nvm.sh

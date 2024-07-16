@@ -1,0 +1,17 @@
+export EDITOR="nvim"
+
+alias vi="nvim"
+alias neofetch="fastfetch"
+alias upgrade="paru -Syu --fm nvim && flatpak upgrade && paru -c && flatpak uninstall --unused"
+alias yay="paru"
+alias cat="bat"
+alias grep="rg"
+alias cm="chezmoi"
+alias firefox="mercury-browser"
+
+alias ld="eza -lD"
+alias lf="eza -lF --color=always | grep -v /"
+alias lh="eza -dl .* --group-directories-first"
+alias ll="eza -al --group-directories-first"
+alias ls="eza"
+alias lt="eza -al --sort=modified"
