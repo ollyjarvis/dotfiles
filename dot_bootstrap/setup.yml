@@ -13,15 +13,15 @@
         name: aur_builder
         create_home: yes
         group: wheel
-    
+
     - name: Allow the `aur_builder` user to run `sudo pacman` without a password
       become: yes
       ansible.builtin.lineinfile:
         path: /etc/sudoers.d/11-install-aur_builder
-        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
         create: yes
         mode: 0644
-        validate: 'visudo -cf %s'
+        validate: "visudo -cf %s"
 
     - name: Install packages
       kewlfft.aur.aur:
@@ -30,51 +30,33 @@
           - ark
           - btop
           - chezmoi
-          - code
-          - code-marketplace
           - docker
           - eza
           - fastfetch
-          - firefox
           - firewalld
           - flatpak
           - fzf
           - git
-          - gnome
-          - jdk19-graalvm-bin
-          - jupyterlab
-          - kdenlive
-          - kpat
           - lsb-release
-          - lutris
           - man-db
           - man-pages
           - neovim
-          - nodejs
-          - npm
           - nvidia
           - nvidia-settings
           - nvidia-utils
           - nvtop
-          - ollama-cuda
-          - oterm
+          - obsidian
           - power-profiles-daemon
-          - protontricks
-          - protonup-qt
           - python
           - qt5ct
           - reflector
           - ripgrep
           - rsync
-          - screen
-          - snapper
           - strawberry
           - ttf-google-fonts-git
           - ttf-jetbrains-mono-nerd
-          - wine
-          - winetricks
           - zip
-          - zoxide
+          - unzip
           - zsh-fast-syntax-highlighting
         state: present
       become: yes
@@ -83,9 +65,7 @@
     - name: Install Flatpak packages
       community.general.flatpak:
         name:
-          - com.obsproject.Studio
           - org.videolan.VLC
-          - md.obsidian.Obsidian
           - com.github.tchx84.Flatseal
           - org.localsend.localsend_app
           - org.qbittorrent.qBittorrent
