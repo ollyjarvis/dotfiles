@@ -37,9 +37,16 @@
           - flatpak
           - fzf
           - git
+          - hyprcursor-git
+          - hypridle-git
+          - hyprlang-git
+          - hyprlock-git
+          - hyprutils-git
+          - hyprland-git
           - lsb-release
           - man-db
           - man-pages
+          - mercury-browser
           - neovim
           - nvidia
           - nvidia-settings
