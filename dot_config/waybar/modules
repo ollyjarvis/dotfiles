@@ -11,7 +11,7 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
@@ -32,7 +32,7 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "persistent_workspaces":{
+    "persistent-workspaces":{
         "1": [],
         "2": [],
         "3": [],
@@ -50,7 +50,6 @@
       "8": "VIII",
       "9": "IX",
       "10": "X",
-      
     },
   },
   // PACMAN Style
@@ -62,7 +61,7 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "show-special": false,
-    "persistent_workspaces":{
+    "persistent-workspaces":{
         "1": [],
         "2": [],
         "3": [],
@@ -81,7 +80,7 @@
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{icon}",
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
@@ -238,9 +237,9 @@
    
   "clock": {
     "interval": 1,
-    //"format": " {:%I:%M %p}",
-    "format": " {:%H:%M:%S}",
-    "format-alt": " {:%H:%M   %Y, %d %B, %A}",
+    //"format": " {:%H:%M:%S}",
+    "format": " {:%H:%M   %a %d %b, %Y}",
+    "format-alt": " {:%H:%M}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode"          : "year",
@@ -453,7 +452,7 @@
   },
       
   "custom/keybinds": {
-    "format":"󰺁 HINT!",
+    "format":"󰺁 ",
     "tooltip": false,
     "on-click": "~/.config/hypr/scripts/KeyHints.sh",
   },
@@ -511,9 +510,9 @@
   },
     
   "custom/weather": {
-    "format": "{}",
-    "format-alt": "{alt}: {}",
-    "format-alt-click": "click",
+    "format": "{alt}: {}",
+    //"format-alt": "{alt}: {}",
+    //"format-alt-click": "click",
     "interval": 3600,
     "return-type": "json",
     "exec": "~/.config/hypr/scripts/Weather.sh",

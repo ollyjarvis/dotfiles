@@ -34,7 +34,13 @@ symbol = " "
 
 [git_branch]
 symbol = " "
-format = "[on](#cdd6f4) [${symbol}${branch}](#cba6f7)"
+format = "[on](#cdd6f4) [${symbol}${branch} ](#cba6f7)"
+
+[git_status]
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+style = "#f38ba8"
 
 [golang]
 symbol = " "
