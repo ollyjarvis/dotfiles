@@ -2,7 +2,7 @@ export EDITOR="nvim"
 
 alias vi="nvim"
 alias neofetch="fastfetch"
-alias upgrade="paru -SFyu --fm nvim && flatpak upgrade && paru -Fy"
+alias upgrade="paru -Syu --fm nvim && flatpak upgrade && paru -Fy"
 alias clean="paru -c && paru -Sc && flatpak uninstall --unused"
 alias cat="bat"
 alias grep="rg"
