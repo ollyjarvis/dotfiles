@@ -28,15 +28,18 @@
         use: paru
         name:
           - ark
+          - brightnessctl
           - btop
           - chezmoi
           - docker
+          - dunst
           - eza
           - fastfetch
           - firewalld
           - flatpak
           - fzf
           - git
+          - grim
           - hyprcursor-git
           - hypridle-git
           - hyprlang-git
@@ -44,22 +47,36 @@
           - hyprutils-git
           - hyprland-git
           - hyprpaper-git
+          - kitty
           - lsb-release
           - man-db
           - man-pages
           - mercury-browser
           - neovim
+          - network-manager-applet
           - obsidian
           - power-profiles-daemon
           - qt5ct
           - reflector
           - ripgrep
+          - rofi-lbonn-wayland-git
+          - pamixer
+          - pipewire-audio
+          - playerctl
+          - polkit
           - rsync
+          - slurp
           - strawberry
-          - ttf-google-fonts-git
-          - zip
+          - thunar
+          - ttf-fira-code
           - unzip
-          - zsh-fast-syntax-highlighting
+          - waybar
+          - wl-clipboard
+          - xdg-desktop-portal
+          - xdg-desktop-portal-hyprland
+          - xdg-desktop-portal-gtk
+          - yad
+          - zip
         state: present
       become: yes
       become_user: aur_builder
