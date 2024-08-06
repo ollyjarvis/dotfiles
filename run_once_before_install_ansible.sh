@@ -42,21 +42,14 @@ echo ""
 
 ansible-playbook ~/.bootstrap/setup.yml --ask-become-pass
 
+read -r -p "Install Nvidia Drivers? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    ansible-playbook ~/.bootstrap/nvidia.yml --ask-become-pass
+fi
+
+
 echo ""
 echo "->->->->->->->->->->->> Ansible Finished <<-<-<-<-<-<-<-<-<-<-<-"
 echo ""
-
-if ! command -v hyprctl &> /dev/null; then
-  cd ~/
-  git clone https://github.com/JaKooLit/Arch-Hyprland.git 
-  cd ~/Arch-Hyprland/
-  chmod +x install.sh
-  ./install.sh
-  
-  cd ~/ 
-  rm -rf ~/Arch-Hyprland/
-fi 
-
-paru -c
 
 sudo userdel -r aur_builder
