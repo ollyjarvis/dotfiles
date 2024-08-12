@@ -71,6 +71,7 @@
           - ttf-fira-code
           - unzip
           - waybar
+          - wlogout
           - wl-clipboard
           - xdg-desktop-portal
           - xdg-desktop-portal-hyprland
