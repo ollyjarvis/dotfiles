@@ -1,0 +1,11 @@
+[user]
+	name = Oliver Jarvis
+	email = olly.m.jarvis@gmail.com
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[alias]
+	ignore = "!gi() { IFS=\",\"; curl -L -s \"https://www.toptal.com/developers/gitignore/api/$*\" | tee .gitignore;}; gi"
