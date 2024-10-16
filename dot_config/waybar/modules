@@ -496,8 +496,7 @@
   "custom/power": {
     "format": "⏻ ",
     "tooltip": false,
-	  "on-click": "~/.config/hypr/scripts/Wlogout.sh",
-    "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
+	  "on-click": "wlogout",
   },
   
   // NOTE:! This is only for Arch and Arch Based Distros  
