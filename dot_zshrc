@@ -1,5 +1,3 @@
-# zmodload zsh/zprof
-
 pokemon-colorscripts-go --no-title
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -41,7 +39,7 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 export PATH=$PATH:/home/olly/.local/share/gem/ruby/3.0.0/bin
-export PATH="/home/olly/.go/bin:$PATH"
+export PATH="$PATH:/home/olly/.go/bin"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -49,5 +47,3 @@ SAVEHIST=1000
 HISTDUP=erase
 
 setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups hist_save_no_dups hist_ignore_dups hist_find_no_dups
-
-# zprof
